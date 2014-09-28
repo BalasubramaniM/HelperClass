@@ -24,6 +24,9 @@ namespace HttpRequestandResponse
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);  // Create a request
             request.Method = "POST"; // request method will be in "POST" or "GET" as per URL
 
+            ///<summary>
+            /// Use StreamWriter class and write only if you want to write something in url, else skip.
+            ///</summary>
             request.BeginGetRequestStream
                     (result =>
                     {
